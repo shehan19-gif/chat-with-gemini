@@ -11,12 +11,16 @@ function App() {
   const [loading, setLoading] = useState(false);
   const [isBtnDisabled, setIsBtnDisabled] = useState(false);
   const inputRef = useRef(); // input field directly access
+  const link = {
+    oldLink: "http://localhost:8000/api",
+    newLink: "chat-with-gemini-server-production.up.railway.app/api"
+  }
 
   useEffect(() => {
     const fetchData = async () => {
       try {
         if(newSendMessage != "") {
-          const response = await axios.post("http://localhost:8000/api", {
+          const response = await axios.post(link.newLink, {
             message: newSendMessage,
           });
           setNewReplyMessage(response.data.reply);
