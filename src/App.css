@@ -1,0 +1,135 @@
+.container {
+  display: grid;
+  grid-gap: 1rem;
+}
+
+h1 {
+  text-align: center;
+  color: darkorchid;
+  font-family: "Vend Sans", sans-serif;
+}
+
+h6 {
+  text-align: center;
+  color: white;
+  font-family: "Vend Sans", sans-serif;
+}
+
+.display-area {
+  padding: 1rem;
+  border-width: 0.375rem;
+  border-style: solid;
+  border-image: linear-gradient(to right, darkblue, darkorchid) 1;
+  font-family: "Vend Sans", sans-serif;
+  width: 40rem;
+  height: 30rem;
+  overflow-y: auto;
+  display: grid;
+  grid-gap: 1rem;
+}
+
+.display-area .user {
+  justify-self: end;
+  padding: 1rem;
+  background-color: darkblue;
+  color: white;
+  overflow-wrap: anywhere;
+  border-radius: 0.25rem;
+  height: fit-content;
+}
+
+.display-area .machine {
+  justify-self: start;
+  padding: 1rem;
+  background-color: darkorchid;
+  color: white;
+  overflow-wrap: anywhere;
+  border-radius: 0.25rem;
+  height: fit-content;
+  align-content: start;
+}
+
+form {
+  padding: 0.5rem;
+  border-width: 0.375rem;
+  border-style: solid;
+  border-image: linear-gradient(to right, darkblue, darkorchid) 1;
+  display: grid;
+  grid-auto-flow: column;
+  grid-template-columns: 5fr 1fr;
+}
+
+/* input[type="text"] {
+  padding: 0.5rem;
+  font-size: 1rem;
+  border: none;
+  outline: none;
+  width: max-content;
+} */
+
+textarea {
+  padding: 0.5rem;
+  font-size: 0.9rem;
+  border: none;
+  outline: none;
+}
+
+button {
+  padding: 0.5rem;
+  color: white;
+  background-color: darkblue;
+  cursor: pointer;
+  font-size: 1rem;
+  border: none;
+  outline: none;
+}
+
+button:disabled {
+  background-color: rgba(0, 0, 139, 0.519);
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.fa-spinner {
+  animation: spin 1s linear infinite;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  box-shadow: inset 0 0 2px darkorchid; 
+  border-radius: 2px;
+}
+ 
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: darkorchid; 
+  border-radius: 2px;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+  background: darkorchid; 
+}
+
+@media screen and (max-width: 540px) {
+  .display-area {
+    width: 30rem;
+  }
+}
+
+@media screen and (max-width: 430px) {
+  .display-area {
+    width: 20rem;
+  }
+}
