@@ -13,7 +13,7 @@ function App() {
   const inputRef = useRef(); // input field directly access
   const link = {
     oldLink: "http://localhost:8000/api",
-    newLink: "chat-with-gemini-server-production.up.railway.app/api"
+    newLink: "https://chat-with-gemini-server-production.up.railway.app/api"
   }
 
   useEffect(() => {
